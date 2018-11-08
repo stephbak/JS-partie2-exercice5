@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 5</title>
+</head>
+<body>
+  <div class="container">
+    <img src="img/image1.jpg" id="image1" onmouseover="changeImage('image1')" /><!--changeImage('image1') sert à préparer les paramètres de fonction-->
+    <img src="img/image2.jpg" id="image2" onmouseover="changeImage('image2')" />
+    <img src="img/image3.jpg" id="image3" onmouseover="changeImage('image3')" />
+    <img src="img/image4.jpg" id="image4" onmouseover="changeImage('image4')" />
+    <img src="img/image5.jpg" id="image5" onmouseover="changeImage('image5')" />
+  </div>
+  <script type="text/javascript">
+  function changeImage(image){//(image) est un paramètre de fonction qui regroupe ('image1')('image2').....
+    console.log(image);
+    document.getElementById(image).src = 'img/' + image + '_2.jpg';//pour la source : 'img/' et '_2.jpg' sont commun à toute les sources voulue.
+    //image est mis à part car le nom n'est pas commun à toutes les images.Ici cela veut dire que si on passe sur image1 il va afficher image1_2 et ainsi de suit.
+
+  }
+  </script>
+</body>
+</html>
